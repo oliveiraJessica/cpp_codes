@@ -1,0 +1,18 @@
+Using most of google style guide for python, that can be found here: https://google.github.io/styleguide/pyguide.html
+
+More restricted to Naming rules:
+
+Packages: lower_with_under
+Modules: lower_with_under
+Classes: CapWords
+Exceptions: CapWords
+Functions: lower_with_under()
+Global/Class Constants: CAPS_WITH_UNDER
+Global/Class Variables: lower_with_under
+Instance Variables: lower_with_under
+Method Names: lower_with_under()
+Function/Method Parameters: lower_with_under
+Local Variables: lower_with_under
+
+And using own Identation rule:
+Ident code blocks using tab in the length of 4 spaces.
