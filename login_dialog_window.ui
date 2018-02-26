@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>login_dialog</class>
+ <widget class="QDialog" name="login_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>340</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Lohit Punjabi</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>FIcha Online - Login</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QGridLayout" name="login_grid_layout">
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <item row="6" column="0" colspan="2" alignment="Qt::AlignHCenter">
+      <widget class="QCheckBox" name="remember_user_check_box">
+       <property name="text">
+        <string>Lembrar usuário</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0" colspan="2">
+      <spacer name="grid_panel_bottom_horizontal_spacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="5" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QLineEdit" name="password_line_edit">
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="password_label">
+       <property name="text">
+        <string>Senha: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QLineEdit" name="user_line_edit"/>
+     </item>
+     <item row="4" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="user_label">
+       <property name="text">
+        <string>Usuário: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="2">
+      <layout class="QHBoxLayout" name="acess_button_horizontal_layout">
+       <item>
+        <spacer name="left_acess_button_horizontal_spacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="acess_push_button">
+         <property name="text">
+          <string>OK</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="rigth_acess_button_horizontal_spacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QLabel" name="acess_title_label">
+       <property name="font">
+        <font>
+         <family>Lohit Punjabi</family>
+         <pointsize>20</pointsize>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="text">
+        <string>Acesso ao Sistema</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <spacer name="grid_panel_top_horizontal_spacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
