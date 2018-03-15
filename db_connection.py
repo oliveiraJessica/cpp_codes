@@ -1,5 +1,6 @@
 import mysql.connector
 
+@Singleton
 class MySQLConnection():
     def __init__(self):
         self.cnx = mysql.connector.connect(user='root', host='localhost', port='3307', db='cadastro')
