@@ -1,6 +1,15 @@
 import mysql.connector
+import singleton
 
-@Singleton
+def singleton(myClass):
+    instances = {}
+    def getInstace(*args, **kwargs):
+        if myClass not in instances:
+            instances[myClass] = myClass(*args, **kwargs)
+        return instances[myClass]
+    return getInstace
+
+@singleton
 class MySQLConnection():
     def __init__(self):
         self.cnx = mysql.connector.connect(user='root', host='localhost', port='3307', db='cadastro')

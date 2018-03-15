@@ -8,8 +8,6 @@ qtCreatorFile = "login_dialog_window.ui"
 
 Ui_Dialog, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
-mysql_connection = MySQLConnection()
-
 class LoginDialogWindow(QtGui.QDialog, Ui_Dialog):
     def __init__(self):
         QtGui.QDialog.__init__(self)
@@ -53,6 +51,7 @@ class LoginDialogWindow(QtGui.QDialog, Ui_Dialog):
         msg.exec_()
 
 if __name__ == "__main__":
+    mysql_connection = MySQLConnection()
     app = QtGui.QApplication(sys.argv)
     window = LoginDialogWindow()
     window.show()
