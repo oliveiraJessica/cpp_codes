@@ -1,6 +1,7 @@
 from tkinter import *
 from pymysql import *
 import tkinter.messagebox
+import os
 
 
 # Funcao chamada ao clicar no botao
@@ -18,6 +19,20 @@ def efetuar_login():
         if rows_affected <= 0:
             tkinter.messagebox.showinfo('Informação de login', 'Seu usuário ou senha está incorreto')
         else:
+            # Salvando login
+            if state_remember_login.get():
+                if not os.path.exists('config.txt'):
+                    open('config.txt', 'w').write('login=teste\n')
+                file = open('config.txt', 'r+')
+                content = file.read()
+                print(content)
+                index1 = content.find('login=') + len('login=')
+                index2 = content.find('\n', index1)
+                content.replace(content[index1:index2], login.get(), 1)
+                print(login.get(), content[index1:index2])
+                file.write(content)
+                file.close()
+
             row = cursor.fetchone()
             if row[2] == password.get():
                 print('Tudo certo')
