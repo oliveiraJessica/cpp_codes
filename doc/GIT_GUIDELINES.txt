@@ -1,8 +1,8 @@
 # Commit comment Guidelines
 
 *Messages should contain subject and body
-*Use a blank linke to separate subject from body
-*Rigth on the imperative: "Ads file..." , "Implement functionality...", "Fix bug..."
+*Use a blank line to separate subject from body
+*Right on the imperative: "Adds file..." , "Implement functionality...", "Fix bug..."
 *Use the body of the message to describe what and why, instead of how
 *Describe code limitations
 *Use a dot in the end of the message, but not to end the subject
