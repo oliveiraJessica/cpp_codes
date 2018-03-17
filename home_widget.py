@@ -3,7 +3,7 @@ from PyQt4 import QtCore, QtGui, uic
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-qtCreatorFile = "home_widget.ui"
+qtCreatorFile = "ui/home_widget.ui"
 
 Ui_Dialog, QtBaseClass = uic.loadUiType(qtCreatorFile)
 

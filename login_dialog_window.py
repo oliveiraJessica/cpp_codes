@@ -4,7 +4,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from db_connection import MySQLConnection
 
-qtCreatorFile = "login_dialog_window.ui"
+qtCreatorFile = "ui/login_dialog_window.ui"
 
 Ui_Dialog, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
