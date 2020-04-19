@@ -1,5 +1,5 @@
 import mysql.connector
-import singleton
+#import singleton
 
 def singleton(myClass):
     instances = {}
@@ -11,18 +11,18 @@ def singleton(myClass):
 
 @singleton
 class MySQLConnection():
-    def __init__(self):
-        self.cnx = mysql.connector.connect(user='root', host='localhost', port='3307', db='cadastro')
-        self.cursor = self.cnx.cursor()
-        try:
-           sql = "select * from users"
-           self.cursor.execute(sql)
-           results = self.cursor.fetchall()
-           for row in results:
-               print(row)
-        finally:
-           # cnx.close()
-            print('What is this finally for?')
+#    def __new__(self):
+    cnx = mysql.connector.connect(user='root', host='localhost', port='3307', db='cadastro')
+    cursor = cnx.cursor()
+#        try:
+#           sql = "select * from users"
+#           self.cursor.execute(sql)
+#           results = self.cursor.fetchall()
+#           for row in results:
+#               print(row)
+#        finally:
+#           # cnx.close()
+#            print('What is this finally for?')
 
     def execute_query(self, query):
         try:

@@ -5,12 +5,12 @@ from PyQt4.QtCore import *
 
 qtCreatorFile = "ui/home_widget.ui"
 
-Ui_Dialog, QtBaseClass = uic.loadUiType(qtCreatorFile)
+Ui_Widget, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
-class HomeWidgetWindow(QtGui.QDialog, Ui_Dialog):
+class HomeWidgetWindow(QtGui.QWidget, Ui_Widget):
     def __init__(self):
-        QtGui.QDialog.__init__(self)
-        Ui_Dialog.__init__(self)
+        QtGui.QWidget.__init__(self)
+        Ui_Widget.__init__(self)
         self.setupUi(self)
         self.register_push_button.clicked.connect(self.register_patient)
         self.search_push_button.clicked.connect(self.search_patient)
@@ -28,9 +28,3 @@ class HomeWidgetWindow(QtGui.QDialog, Ui_Dialog):
 
     def exit(self):
         print("Fechar janela")
-
-if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
-    window = HomeWidgetWindow()
-    window.show()
-    sys.exit(app.exec_())

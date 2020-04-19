@@ -3,6 +3,7 @@ from PyQt4 import QtCore, QtGui, uic
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from db_connection import MySQLConnection
+from home_widget import HomeWidgetWindow
 
 qtCreatorFile = "ui/login_dialog_window.ui"
 
@@ -27,11 +28,12 @@ class LoginDialogWindow(QtGui.QDialog, Ui_Dialog):
         password_text = self.password_line_edit.text()
         query = "select id from users where login = '" + user_text + "' and password = '" + password_text + "';"
         print(query)
-        user_id = mysql_connection.execute_query(query)
+        connection = MySQLConnection()
+        user_id = connection.execute_query(query)
         print(user_id)
         if user_id != None:
             print(user_id, ' connected')
-            self.summom_welcome_window()
+            self.summom_home_window()
         else:
             self.summom_warning_window()
             print('Senha ou usuário incorreto')
@@ -50,10 +52,7 @@ class LoginDialogWindow(QtGui.QDialog, Ui_Dialog):
         msg.setWindowTitle("Login efetuado")
         msg.exec_()
 
-if __name__ == "__main__":
-    mysql_connection = MySQLConnection()
-    app = QtGui.QApplication(sys.argv)
-    window = LoginDialogWindow()
-    window.show()
-    sys.exit(app.exec_())
-    #mysql_connection.cnx.close()
+    def summom_home_window(self):
+        home_window = HomeWidgetWindow()
+        #self.hide()
+        home_window.show()
